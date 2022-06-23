@@ -22,7 +22,7 @@ mongoose.connect('mongodb://localhost:27017/testdb').then(() => {
     console.log("connection failed");
 })
 
-let port = 8080;
+let port = process.env.PORT || 3000;
 const protectedRoute = express.Router();
 
 app.set('key', 'secret');
